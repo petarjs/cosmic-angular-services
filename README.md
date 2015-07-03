@@ -4,7 +4,9 @@ In this first exercise we will make a list of offered services.
 The services in the list have a name and a price.  
 Clicking on a service selects or deselects that service.  
 Services that are selected are red, while the selected ones are green.  
-Below the list, we want to show the calculated sum of all selected services.
+Below the list, we want to show the calculated sum of all selected services.  
+
+You will find the image depicting the task in `example-image` folder.
 
 ## Submitting your solutions
 
