@@ -1,0 +1,19 @@
+<div class="main">
+  <h1 class="__title ta-c">Services</h1>
+  
+  <div class="__list">
+
+    <div class="__item" ng-repeat="service in services" ng-class="{'__item--selected': isSelected[service.id]}" ng-click="selectService(service)">
+      <div class="__name">{{ service.name }}</div>
+      <div class="__price">${{ service.price }}</div>
+    </div>
+
+  </div>
+  
+  <hr>
+
+  <div class="__price">
+    <div class="__text">Total:</div>
+    <div class="__sum">${{ getPrice() }}</div>
+  </div>
+</div>
