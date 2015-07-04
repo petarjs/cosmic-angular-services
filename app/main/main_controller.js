@@ -36,6 +36,14 @@
         $scope.isSelected[service.id] = !$scope.isSelected[service.id];
       };
 
+      $scope.addItem = function() {
+        $scope.services.unshift({
+            id: $scope.services.length + 1,
+            name: $scope.service.name,
+            price: $scope.service.price
+        });
+      };
+
       $scope.getPrice = function() {
         var price = 0;
         var currentId;

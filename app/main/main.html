@@ -1,6 +1,6 @@
 <div class="main">
   <h1 class="__title ta-c">Services</h1>
-  
+
   <div class="__list">
 
     <div class="__item" ng-repeat="service in services" ng-class="{'__item--selected': isSelected[service.id]}" ng-click="selectService(service)">
@@ -9,11 +9,20 @@
     </div>
 
   </div>
-  
+
   <hr>
 
   <div class="__price">
     <div class="__text">Total:</div>
     <div class="__sum">${{ getPrice() }}</div>
+  </div>
+
+  <hr>
+  <br>
+
+  <div class="additems" ng-model="services">
+    Name : <input class="input-field" type="text" ng-model="service.name">
+    Price : <input class="input-field" type="text" ng-model="service.price">
+    <button class="add-button" ng-click="addItem()">Add</button>
   </div>
 </div>
