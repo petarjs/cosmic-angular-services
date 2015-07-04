@@ -48,6 +48,14 @@
         return price;
       };
 
+      $scope.addItem = function() {
+        $scope.services.unshift({
+            id: $scope.services.length + 1,
+            name: $scope.service.name,
+            price: $scope.service.price
+        });
+      };
+
     });
 
 })();
