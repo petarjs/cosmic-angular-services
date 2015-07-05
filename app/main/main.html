@@ -1,6 +1,7 @@
 <div class="main">
 
   <input type="text" class="search" placeholder="Type to search" ng-model="searchName">
+  <br>
   <h1 class="__title ta-c">Services</h1>
 
   <div class="__list">
@@ -8,6 +9,7 @@
     <div class="__item" ng-repeat="service in services | filter:searchName" ng-class="{'__item--selected': isSelected[service.id]}" ng-click="selectService(service)">
       <div class="__name">{{ service.name }}</div>
       <div class="__price">${{ service.price }}</div>
+      <button class="removeButton" ng-click="removeItem($index)">Remove item</button>
     </div>
 
   </div>

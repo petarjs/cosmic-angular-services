@@ -117,6 +117,22 @@ hr {
   color: #fff;
 }
 
+.add-button:hover {
+  cursor: pointer;
+}
+
+.removeButton {
+  width: 100px;
+  position: relative;
+  top: 25px;
+  right: -180px;
+  padding: 5px;
+  border: none;
+  background-color: #61a1bc;
+  cursor: pointer;
+  color: #fff;
+}
+
 .search {
   margin-left: 150px;
   border: none;

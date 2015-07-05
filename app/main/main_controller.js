@@ -44,6 +44,10 @@
         });
       };
 
+      $scope.removeItem = function(index) {
+        $scope.services.splice(index, 1);
+      };
+
       $scope.getPrice = function() {
         var price = 0;
         var currentId;
