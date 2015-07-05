@@ -1,9 +1,11 @@
 <div class="main">
+
+  <input type="text" class="search" placeholder="Type to search" ng-model="searchName">
   <h1 class="__title ta-c">Services</h1>
 
   <div class="__list">
 
-    <div class="__item" ng-repeat="service in services" ng-class="{'__item--selected': isSelected[service.id]}" ng-click="selectService(service)">
+    <div class="__item" ng-repeat="service in services | filter:searchName" ng-class="{'__item--selected': isSelected[service.id]}" ng-click="selectService(service)">
       <div class="__name">{{ service.name }}</div>
       <div class="__price">${{ service.price }}</div>
     </div>
@@ -20,7 +22,7 @@
   <hr>
   <br>
 
-  <div class="additems" ng-model="services">
+  <div class="additems">
     Name : <input class="input-field" type="text" ng-model="service.name">
     Price : <input class="input-field" type="text" ng-model="service.price">
     <button class="add-button" ng-click="addItem()">Add</button>
